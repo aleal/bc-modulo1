@@ -59,5 +59,6 @@ server.delete("/users/:index", (req, res) => {
   const { index } = req.params;
   res.json(users.splice(index, 1));
 });
-
-server.listen(7777);
+const PORT = 7777;
+server.listen(PORT);
+console.log(`\x1b[35mServer started at port: \x1b[36m${PORT}\x1b[0m`);
